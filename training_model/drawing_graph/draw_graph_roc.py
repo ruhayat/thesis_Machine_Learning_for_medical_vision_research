@@ -30,7 +30,7 @@ liste_TPR_60 = []
 
 
 i=0
-with open("../metrics_test/roc_onh/roc_metrics.txt", "r") as f:
+with open("../metrics_test/roc_"+onh_or_periphery+"/roc_metrics.txt", "r") as f:
     
     for row in f :
         liste = row.split()
