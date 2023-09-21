@@ -71,18 +71,10 @@ if cropping_size == "00" and onh_or_periphery == "onh":
     liste_filename_retained = []
 
 
-    #dico_patient_ids = dict()
-    #patients_ids = np.unique(filename_labels["patients_ids"].values)
-
-    #for patient_id in patients_ids:
-
-    #    dico_patient_ids[patient_id] =0
 
 
-    #nb_label_0=0
 
     for index,row in filename_labels.iterrows():
-        #patient_id = row["patients_ids"]
     
     
         filename = row["path"]
@@ -92,7 +84,6 @@ if cropping_size == "00" and onh_or_periphery == "onh":
         if modified_filename in filenames:
 
             liste_filename_retained.append(row["path"])
-            #dico_patient_ids[patient_id]+=1
 
    
     
@@ -211,7 +202,7 @@ if cropping_size == "00" and onh_or_periphery == "onh":
 
 
 else:
-#we keep the same split for data that are not occluded
+#we keep the same split for data that are  occluded
 
 
     training_files_00_onh_label_0 = os.listdir("../data/onh/data_00_onh/training_images/Images/label_0")
