@@ -45,8 +45,12 @@ for i,(inputs,labels) in enumerate(dataloader):
     print(i)    
 
 
-
-
+print("Mean red channel ", np.mean(data_mean_red_channel))
+print("std red channel ", np.std(data_mean_red_channel))
+print("Mean green channel ", np.mean(data_mean_green_channel))
+print("std green channel ", np.std(data_mean_green_channel))
+print("Mean red-green channel ",np.mean(np.subtract(data_mean_red_channel,data_mean_green_channel)))
+print("std red-green channel ", np.std(np.subtract(data_mean_red_channel,data_mean_green_channel)))
 
 
 data = torch.stack(data)
